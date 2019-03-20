@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body{
+        background-image: url({% static 'home/img/dust_scratches.png' %});
+        text-align: center;
+      }
+    </style>
+    <title>AAvishkar</title>
+
+    <link rel="stylesheet" type="text/css" href={% static 'home/bootstrap.min.css' %}>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href={% static 'home/style.css' %}>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
+</head>
+  <body class="container">
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand span12" href="#" style="font-size: 50px; text-align: center;">Resgister Yourself for AAvishkar</a>
+        </div>
+      </div>
+    </div>
+    <br>
+   <form method="post" action="{% url 'signup' %}">
+
+     {% csrf_token %}
+     <label style="font-size: 20px; font-family: helvetica;"><strong>Full Name :</strong></label><br>
+     {{ form.fullname }}<br>
+     <label style="font-size: 20px; font-family: helvetica;"><strong>UserName :</strong></label><br>
+
+     {{ form.username }}<br>
+     <label style="font-size: 20px; font-family: helvetica;"><strong>E-Mail :</strong></label><br>
+
+     {{ form.email }}<br>
+     <label style="font-size: 20px; font-family: helvetica;"><strong>Password :</strong></label><br>
+
+     {{ form.password }}<br>
+     <br>
+     <input type="submit" class="btn btn-success" name="signup" value="Signup">
+
+   </form>
+
+  </body>
+</html>

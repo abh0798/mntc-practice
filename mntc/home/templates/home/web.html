@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AAvishkar</title>
+    <link rel="stylesheet" type="text/css" href={% static 'home/bootstrap.min.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'home/style.css' %}>
+
+<!--     <link href="bootstrap.min.css" rel="stylesheet">    -->  
+    <style>
+      body {
+        padding-top: 40px;
+        background-image: url({% static 'home/img/dust_scratches.png' %});
+      }
+    </style>
+
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
+    <!-- <link href="style.css" rel="stylesheet"> -->
+ </head>
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand span8" href="#"><img id="pic" style="width:70px;" src={% static 'home/logo.png' %}>AAVISHKAR 2K18</a>
+          
+            <ul class="nav pull-right span4" style="float: right;">
+              <li><a href="#about">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+              <li><a href="{% url 'signup' %}">Sign up</a></li>
+            </ul>
+          </div>
+        
+      </div>
+    </div>
+       
+    <div class="container">
+      <div id="about">
+        <div id="heading">
+          <br><br><br><br>
+          <h1>About Us</h1>
+          <p class="lead">Aavishkar-The Tech Fest, NIT Durgapur is the official technical fest of NIT Durgapur. It aims to instill a desire for technical expertise ,rational thinking ,logical thought process and open-source contributions. With more than 40 events which include online and offline events, it tries to bring to the fore people in fields other than academia. Numerous workshops,guest lectures and exhibitions are organised to provide a platform where people not only have fun, but also learn and grow.Aavishkar is a step in the goal of encompassing all technical domains and serve it for students of NIT Durgapur and our guests from other colleges. </p>  
+        </div>
+        <div class="divider"></div>
+        <div id="events" class="row">
+          <br><br>
+          <h1>Events</h1>
+               
+          <div class="span3"><img class="img-rounded" src={% static 'home/img/online.png' %} alt=""><a href="#onlineevents"><h2>Online</h2></a></div>
+          <div class="span3"><img class="img-rounded" src={% static 'home/img/offline.png' %} alt=""><a href="#offlineevents"><h2>On Site</h2></a></div>
+          <div class="span3"><img class="img-rounded" src={% static 'home/img/workshop1.png' %} alt=""><a href="#work"><h2>Workshops</h2></a></div>
+          <div class="span3"><img class="img-rounded" src={% static 'home/img/keynote.png' %} alt=""><h2><a href="#onlineevents">Ignitia</h2></a></div>      
+        </div>
+
+        
+      </div><br>
+      <div class="divider"></div>
+
+        
+      <div id="onlineevents" class="row">
+          <br><br><br><br><br>
+
+          <h1 style="text-align: center;">Online Events</h1>
+               <br>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/on/DF_w.jpg' %} alt=""><h2>Digital Fortress</h2></div>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/on/freepl.jpg' %} alt=""><h2>FreePL</h2></div>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/on/OTH_w.jpg' %} alt=""><h2>Online Treasure Hunt</h2></div>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/on/Freemax.jpg' %} alt=""><h2>Freemex</h2></div>   
+        </div>
+        <br><br>
+
+          <div class="divider"></div>
+
+        <div id="offlineevents" class="row">
+          <br><br><br><br><br>
+
+
+          <h1 style="text-align: center;">Offline Events</h1>
+               <br><br>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/off/calloutsherlock.jpg' %} alt=""><h2>Call Out Sherlock</h2></div>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/off/matrix.jpg' %} alt=""><h2>Matrix</h2></div>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/off/kryptic.jpg' %} alt=""><h2>Kryptic</h2></div>
+          <div class="span3" style="text-align: center;"><img class="img-polaroid" src={% static 'home/off/incanity.jpg' %} alt=""><h2>Incanity</h2></div>   
+        </div>
+
+        <div id="work" class="row">
+          <br><br><br><br><br>
+          <div class="divider"></div>
+          <br><br><br>
+          <h1 style="text-align: center;">Workshops</h1>
+               <br><br>
+          <div class="span6" style="text-align: center;"><img class="img-polaroid" src={% static 'home/robo.jpg' %} alt=""></div>
+          <div class="span6" style="text-align: center; font-family: helvetica;"><h2 style="color: green;">About the event:</h2>
+          <h4 style="font-size: 130%; text-align: left;  font-family: helvetica;">Gone are the days when Raspberry pi reminded you of dessert and Arduinos were considered just another fad. Installing code on those advanced microprocessor chips and using it to run the self-made machine is quite an interesting thing to do , making quite a buzz these days. What if we told you that you could do all of this, and learn other advanced stuff too. This Aavishkar come enter the world of arduino.</h4>      
+          <h2 style="text-align: left;  font-family: helvetica;">Venue:</h2>   
+          <h4 style="font-size: 130%; text-align: left;  font-family: helvetica;">DM SEN/ NEW ACAD</h4>   
+          <h2 style="text-align: left;  font-family: helvetica;">Time:</h2>             
+          <h4 style="font-size: 130%; text-align: left;  font-family: helvetica;">March 16, 2018, 9 a.m.</h4>                     
+          </div>
+        </div>
+
+      </div>
+      <br><br>
+
+
+    </div> 
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <h3>Contact</h3>
+              <p>+91 9110167828</p>
+              <p>+91 8986155976</p>
+            </div>
+            <div class="span6">
+              <h3>Email</h3>
+              <p>abhinavprakash.prakash@gmail.com</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery.easing['jswing'] = jQuery.easing['swing'];
+
+        jQuery.extend( jQuery.easing,
+        {
+          def: 'easeOutQuad',
+          swing: function (x, t, b, c, d) {
+            return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+          },
+          easeOutQuad: function (x, t, b, c, d) {
+            return -c *(t/=d)*(t-2) + b;
+          },
+          easeInOutExpo: function (x, t, b, c, d) {
+            if (t==0) return b;
+            if (t==d) return b+c;
+            if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+            return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+          }
+        });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('a[href^="#"]').click(function(event) {
+            var id = $(this).attr("href");
+            var offset = 60;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({scrollTop:target}, 800, $.easing.easeInOutExpo());
+            event.preventDefault();
+        });
+      });
+    </script>
+
+    <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+              
+          </form>
+        </div>
+        <script>
+        var modal = document.getElementById('id01');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+
+  </body>
+</html>
